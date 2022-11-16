@@ -1,0 +1,186 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 30px 0 0 0;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    list-style: none;
+}
+
+
+
+
+
+
+/* HEADER */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    padding-bottom: 90px;
+}
+
+.header-nav-list{
+    display: flex;
+}
+
+.header-nav-list__item{
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.header-nav-list__item:not(:last-child){
+    margin-right: 15px;
+}
+
+
+
+
+/* TITLE-PAGE */
+
+.title-page{
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.title-page__title{
+    font-size: 50px;
+}
+
+.title-page__desc{
+    width: 50%;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+
+
+
+/* BLOCKS */
+
+.blocks{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blocks-block{
+    flex-basis: calc((100% - 50px) / 3);
+    height: 300px;
+    background-color: orange;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.blocks-block:not(:nth-child(3n)){
+    margin-right: 25px;
+}
+
+.blocks-block__title{
+    text-align: center;
+    color: #fff;
+}
+
+
+
+
+
+/* FOOTER */
+
+
+
+
+.footer{
+    padding: 30px;
+    background-color: grey;
+    color: #fff;
+    text-align: center;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+
+
+/* MEDIA */
+
+@media screen and (max-width: 992px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+    .blocks-block{
+        flex-basis: calc((100% - 25px) / 2);
+    }
+
+    .blocks-block:not(:nth-child(3n)){
+        margin-right: 0;
+    }
+
+    .blocks-block:not(:nth-child(2n)){
+        margin-right: 25px;
+    }
+
+    .header{
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .blocks-block{
+        flex-basis: 100%;
+    }
+
+    .blocks-block:not(:nth-child(2n)){
+        margin-right: 0;
+    }
+
+    .title-page__title{
+        font-size: 45px;
+    }
+
+    .title-page__desc{
+        font-size: 18px;
+        width: 90%;
+    }
+
+    .logo{
+        margin: 0 auto;
+    }
+
+    .header{
+        padding-bottom: 0;
+    }
+
+    .header-nav{
+        display: none;
+    }
+}
